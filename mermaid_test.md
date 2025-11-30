@@ -12,8 +12,8 @@ RNA-seq, Clinical, PAM50, GENCODE] --> B[⚙️ Data Preprocessing & Feature Eng
     C --> D[🧬 PAM50 Gene Selection & Annotation]                      
     D --> E[✨ Feature Selection]                        
     E --> F[📝 Train & Test Split]                
-    F --> G[🤖 Model Training & Evaluation
-Random Forest Classification]                 
+    F --> G[🤖 Random Forest Classification Model
+                Training & Evaluation]                 
     G --> H[🔑 SHAP Analysis & Feature Importance Ranking]                  
     H --> I[🏷️ Subtype Predictions & Biomarkers Identification]               
     I --> J[📈 Visualization Plots]             
