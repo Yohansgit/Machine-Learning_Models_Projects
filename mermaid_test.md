@@ -6,7 +6,10 @@ flowchart TD
 
 ```mermaid        
 flowchart TD                 
- A[🔄 Data Acquisition: RNA-seq, Clinical, PAM50, GENCODE] --> B[⚙️ Data Preprocessing & Feature Engineering]                   
+ A[🔄 Data Acquisition:  
+         RNA-seq   
+         Clinical  
+         PAM50, GENCODE] --> B[⚙️ Data Preprocessing & Feature Engineering]                   
     B --> C[📊 PCA Analysis]                      
     C --> D[🧬 PAM50 Gene Selection & Annotation]                      
     D --> E[✨ Feature Selection]                        
