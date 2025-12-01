@@ -1,16 +1,20 @@
 ```mermaid
 flowchart TD
 
-    %% ========== top row forced horizontal inside a subgraph ==========
-    subgraph TOP
-    direction LR
-        A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
-    end
+    %% Invisible helpers to force horizontal alignment for the first row
+    A[Problem Statement]
+    B[Data Collection]
+    C[Data Preprocessing]
 
-    %% hide subgraph border/background so it doesn't create a yellow banner
-    style TOP fill:none,stroke:none
+    A --> B
+    B --> C
 
-    %% ========== vertical flow after Data Preprocessing ==========
+    %% Force B and C to stay on same row by locking them to invisible nodes
+    A --- X1(( )):::invis
+    B --- X2(( )):::invis
+    C --- X3(( )):::invis
+
+    %% Vertical flow begins here
     C --> D[Choose Model]
     D --> E[Training Model]
     E --> F[Cross Validation]
@@ -18,6 +22,9 @@ flowchart TD
     G -- No --> H[Parameters Tuning]
     H --> E
     G -- Yes --> I[Deployment]
+
+    %% Style for invisible alignment nodes
+    classDef invis fill:none,stroke:none;
 
 ```
 
