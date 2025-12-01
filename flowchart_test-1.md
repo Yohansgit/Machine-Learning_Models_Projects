@@ -4,7 +4,7 @@ flowchart LR
     A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]
 
     %% Downward arrow to choose model 
-    C -->|↓| D[Choose Model]
+    C --> D[Choose Model]
 
     %% Training workflow
         D --> E[Training Model]
