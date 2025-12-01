@@ -1,18 +1,19 @@
 ```mermaid
 flowchart LR
-    %% Top horizontal row
-    A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]
+    %% Top row forced horizontal
+    subgraph TOP[]
+    direction LR
+        A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]
+    end
 
-    %% Downward arrow to choose model 
+    %% Vertical Flow
     C --> D[Choose Model]
-
-    %% Training workflow
-        D --> E[Training Model]
-        E --> F[Cross Validation]
-        F --> G{Training Goal Met?}
-        G -- No --> H[Parameters Tuning]
-        H --> E
-        G -- Yes --> I[Deployment]
+    D --> E[Training Model]
+    E --> F[Cross Validation]
+    F --> G{Training Goal Met?}
+    G -- No --> H[Parameters Tuning]
+    H --> E
+    G -- Yes --> I[Deployment]
 ```
 
 
