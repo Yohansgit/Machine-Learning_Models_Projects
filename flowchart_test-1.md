@@ -1,13 +1,14 @@
 ```mermaid
-flowchart LR
-    %% Top row forced horizontal
-    subgraph TOP[]
-    direction LR
-        A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]
-    end
+flowchart TD
 
+    %% Top row forced horizontal   
+    subgraph TOP[ ]   
+    direction LR 
+        A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]     
+    end     
+   
     %% Vertical Flow
-    C --> D[Choose Model]
+    C --> D[Choose Model]    
     D --> E[Training Model]
     E --> F[Cross Validation]
     F --> G{Training Goal Met?}
