@@ -24,8 +24,10 @@ flowchart TD
     L[🚀Deployment]:::output
     M[Model Monitoring<br/>Drift Detection]:::monitor
     N[Retrain Model]:::monitor
-
     A --> B --> C
+    A --- HA1(( )):::h
+    B --- HA2(( )):::h
+    C --- HA3(( )):::h
     C--> D
     D--> E --> F --> G --> H --> I
     I -- No --> J --> F
