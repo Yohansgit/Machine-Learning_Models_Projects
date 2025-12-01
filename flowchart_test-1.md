@@ -1,7 +1,7 @@
 ```mermaid
 flowchart TD
 
-%% ===== TOP HORIZONTAL =====
+%% ===== TOP HORIZONTAL (forced with invisible anchors) =====
 A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
 
 %% invisible nodes to keep A, B, C on same row
@@ -9,7 +9,7 @@ A --- HA1(( )):::h
 B --- HA2(( )):::h
 C --- HA3(( )):::h
 
-%% ===== VERTICAL FLOW =====
+%% ===== VERTICAL FLOW FROM HERE =====
 C --> D[Choose Model]
 D --> E[Parameters Tuning]
 E --> F[Training Model]
@@ -21,6 +21,16 @@ H -->|Yes| I[Deployment]
 %% ===== Class for invisible nodes =====
 classDef h fill:none,stroke:none;
 ```
+
+
+
+
+
+%% connections
+D --> E
+G --> H{Training goal met?}
+H -->|No| E
+H -->|Yes| I[Deployment]
 
 
 
