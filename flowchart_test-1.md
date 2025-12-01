@@ -1,20 +1,24 @@
 ```mermaid
 flowchart TD
 
-    %% Top row forced horizontal   
-    subgraph TOP     
-    direction LR 
-        A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]     
-    end     
-   
-    %% Vertical Flow
-    C --> D[Choose Model]    
+    %% ========== top row forced horizontal inside a subgraph ==========
+    subgraph TOP
+    direction LR
+        A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
+    end
+
+    %% hide subgraph border/background so it doesn't create a yellow banner
+    style TOP fill:none,stroke:none
+
+    %% ========== vertical flow after Data Preprocessing ==========
+    C --> D[Choose Model]
     D --> E[Training Model]
     E --> F[Cross Validation]
     F --> G{Training Goal Met?}
     G -- No --> H[Parameters Tuning]
     H --> E
     G -- Yes --> I[Deployment]
+
 ```
 
 
