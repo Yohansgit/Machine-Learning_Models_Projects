@@ -24,11 +24,13 @@ flowchart TD
     L[🚀Deployment]:::output
     M[Model Monitoring<br/>Drift Detection]:::monitor
     N[Retrain Model]:::monitor
+subgraph TOP [ ]
+    direction LR
     A --> B --> C
-    A --- HA1(( )):::h
-    B --- HA2(( )):::h
-    C --- HA3(( )):::h
+    end
     C--> D
+subgraph FLOW [ ]
+    direction LR
     D--> E --> F --> G --> H --> I
     I -- No --> J --> F
     I -- Yes --> K --> L --> M
