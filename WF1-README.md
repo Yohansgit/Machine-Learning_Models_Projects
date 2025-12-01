@@ -24,17 +24,8 @@ flowchart TD
     L[🚀Deployment]:::output
     M[Model Monitoring<br/>Drift Detection]:::monitor
     N[Retrain Model]:::monitor
-subgraph
-    direction LR
-    A --> B --> C
-end
-    C--> D
-subgraph FLOW
-    direction LR
-    D--> E --> F --> G --> H --> I
-end
+    A --> B --> C --> D --> E --> F --> G --> H --> I
     I -- No --> J --> F
     I -- Yes --> K --> L --> M
     M -- Drift Detected --> N --> F
-end
 ```
