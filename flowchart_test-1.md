@@ -2,17 +2,39 @@
 
 ```mermaid
 graph TD
-    A[Problem Statement] --> B[Data Collection]
-    B --> C[Data Preprocessing]
-    C --> D[Choose Model]
-    D --> E[Parameters Tuning]
-    E --> F[Training Model]
-    F --> G[Cross Validation]
-    G --> H{Training goal meet?}
-    H -->|No| E
-    H -->|Yes| I[Deployment]
+    subgraph A [Initial Phase]
+        direction LR
+        A1[Problem Statement] --> A2[Data Collection] --> A3[Data Preprocessing]
+    end
+    
+    A3 --> B[Choose Model]
+    
+    subgraph C [Training & Validation Phase]
+        direction LR
+        C1[Parameters Tuning] --> C2[Training Model] --> C3[Cross Validation]
+    end
+    
+    C3 --> D{Training goal meet?}
+    D -->|No| C1
+    D -->|Yes| E[Deployment]
 ```
 
+graph TD
+    subgraph A [Initial Phase]
+        direction LR
+        A1[Problem Statement] --> A2[Data Collection] --> A3[Data Preprocessing]
+    end
+    
+    A3 --> B[Choose Model]
+    
+    subgraph C [Training & Validation Phase]
+        direction LR
+        C1[Parameters Tuning] --> C2[Training Model] --> C3[Cross Validation]
+    end
+    
+    C3 --> D{Training goal meet?}
+    D -->|No| C1
+    D -->|Yes| E[Deployment]
 
 
 
