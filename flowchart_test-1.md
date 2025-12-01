@@ -1,3 +1,41 @@
+# Machine Learning Workflow
+
+```mermaid
+graph TD
+    A[Problem Statement] --> B[Data Collection]
+    B --> C[Data Preprocessing]
+    C --> D[Choose Model]
+    D --> E[Parameters Tuning]
+    E --> F[Training Model]
+    F --> G[Cross Validation]
+    G --> H{Training goal meet?}
+    H -->|No| E
+    H -->|Yes| I[Deployment]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```mermaid
 flowchart TD
 
