@@ -1,13 +1,14 @@
 ```mermaid
-flowchart TD
-    A[Problem Statement] --> B[Data Collection]
-    B --> C[Data Preprocessing]
+flowchart LR
+    %% Top horizontal row
+    A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]
+
+    %% Downward to model choice 
     C --> D[Choose Model]
 
-    %% Dashed box
-    subgraph Training Loop
+    %% Training loop
+    subgraph Training_Loop [ ]
     direction LR
-
         D --> E[Training Model]
         E --> F[Cross Validation]
         F --> G{Training Goal Met?}
