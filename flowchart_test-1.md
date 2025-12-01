@@ -1,17 +1,29 @@
-
-
-
 ```mermaid
-graph LR
+flowchart TD
+
+%% ------------------ TOP HORIZONTAL ------------------
+subgraph prep
+direction LR
     A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
 end
-graph TD
-   C --> D[Choose Model]
-    
-    subgraph D [Training & Validation Phase]
-        direction LR
-        E1[Parameters Tuning] --> E2[Training Model] --> E3[Cross Validation]
-    end
+style prep fill:none,stroke:none
+
+%% vertical flow starts here
+C --> D[Choose Model]
+
+%% ------------------ MIDDLE HORIZONTAL ------------------
+subgraph dev
+direction LR
+    E[Parameters Tuning] --> F[Training Model] --> G[Cross Validation]
+end
+style dev fill:none,stroke:none
+
+%% connections
+D --> E
+G --> H{Training goal met?}
+H -->|No| E
+H -->|Yes| I[Deployment]
+
 
 ```
 
