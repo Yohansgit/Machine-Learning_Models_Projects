@@ -4,7 +4,7 @@ flowchart TD
     %% --- Define Colors ---
 classDef start fill:#4CAF50,stroke:#1B5E20,color:#fff;     
 classDef data fill:#FF8A80,stroke:#C62828,color:#000;     
-classDef process fill:#7E57C2,stroke:#4A148C,color:#fff;    
+classDef process fill:#26C6DA,stroke:#00838F,color:#000;  
 classDef model fill:#FF7043,stroke:#E64A19,color:#fff;    
 classDef decision fill:#FDD835,stroke:#F9A825,color:#000;    
 classDef output fill:#66BB6A,stroke:#2E7D32,color:#fff;    
