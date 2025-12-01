@@ -2,7 +2,7 @@
 flowchart TD
 
     %% Top row forced horizontal   
-    subgraph TOP[ ]   
+    subgraph TOP     
     direction LR 
         A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]     
     end     
