@@ -3,22 +3,16 @@ flowchart LR
     %% Top horizontal row
     A[Problem Statement] --> B[Data Acquisition] --> C[Data Preprocessing]
 
-    %% Downward to model choice 
-    C --> D[Choose Model]
+    %% Downward arrow to choose model 
+    C -->|↓| D[Choose Model]
 
-    %% Training loop
-    subgraph Training_Loop [ ]
-    direction LR
+    %% Training workflow
         D --> E[Training Model]
         E --> F[Cross Validation]
         F --> G{Training Goal Met?}
-
         G -- No --> H[Parameters Tuning]
         H --> E
-
         G -- Yes --> I[Deployment]
-
-    end
 ```
 
 
