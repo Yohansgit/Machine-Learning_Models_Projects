@@ -1,3 +1,22 @@
+
+
+
+```mermaid
+graph LR
+    A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
+end
+graph TD
+   C --> D[Choose Model]
+    
+    subgraph D [Training & Validation Phase]
+        direction LR
+        E1[Parameters Tuning] --> E2[Training Model] --> E3[Cross Validation]
+    end
+
+```
+
+
+
 # Machine Learning Workflow
 
 ```mermaid
@@ -7,12 +26,7 @@ graph TD
         A1[Problem Statement] --> A2[Data Collection] --> A3[Data Preprocessing]
     end
     
-    A3 --> B[Choose Model]
-    
-    subgraph C [Training & Validation Phase]
-        direction LR
-        C1[Parameters Tuning] --> C2[Training Model] --> C3[Cross Validation]
-    end
+ 
     
     C3 --> D{Training goal meet?}
     D -->|No| C1
