@@ -2,13 +2,13 @@
 flowchart TD
 
     %% --- Define Colors ---
-    classDef start fill:#4CAF50,stroke:#1B5E20,color:#fff;
-    classDef data fill:#0288D1,stroke:#01579B,color:#fff;
-    classDef process fill:#7E57C2,stroke:#4A148C,color:#fff;
-    classDef model fill:#FF7043,stroke:#E64A19,color:#fff;
-    classDef decision fill:#FDD835,stroke:#F9A825,color:#000;
-    classDef output fill:#66BB6A,stroke:#2E7D32,color:#fff;
-    classDef monitor fill:#26A69A,stroke:#004D40,color:#fff;
+classDef start fill:#4CAF50,stroke:#1B5E20,color:#fff;       %% green
+classDef data fill:#81D4FA,stroke:#0288D1,color:#000;        %% light blue
+classDef process fill:#7E57C2,stroke:#4A148C,color:#fff;    %% purple
+classDef model fill:#FF7043,stroke:#E64A19,color:#fff;      %% orange
+classDef decision fill:#FDD835,stroke:#F9A825,color:#000;   %% yellow
+classDef output fill:#66BB6A,stroke:#2E7D32,color:#fff;     %% green
+classDef monitor fill:#26A69A,stroke:#004D40,color:#fff;    %% teal
 
     A[Define Objective]:::start
     B[🔄Data Acquisition<br/>RNA-seq, Clinical, Gencode]:::data
