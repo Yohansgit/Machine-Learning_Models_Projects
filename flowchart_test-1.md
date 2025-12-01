@@ -1,3 +1,33 @@
+```mermaid
+flowchart TD
+    A[Problem Statement] --> B[Data Collection]
+    B --> C[Data Preprocessing]
+    C --> D[Choose Model]
+
+    %% Dashed box
+    subgraph Training Loop
+    direction LR
+
+        D --> E[Training Model]
+        E --> F[Cross Validation]
+        F --> G{Training Goal Met?}
+
+        G -- No --> H[Parameters Tuning]
+        H --> E
+
+        G -- Yes --> I[Deployment]
+
+    end
+```
+
+
+
+
+
+
+
+
+
 ```mermaid   
 flowchart TD
 
