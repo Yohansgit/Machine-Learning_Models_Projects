@@ -1,22 +1,33 @@
 ```mermaid
 flowchart TD
+flowchart TD
 
-%% ------------------ TOP HORIZONTAL ------------------
-subgraph prep
-direction LR
-    A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
-end
-style prep fill:none,stroke:none
+%% ===== TOP HORIZONTAL (forced with invisible anchors) =====
+A[Problem Statement] --> B[Data Collection] --> C[Data Preprocessing]
 
-%% vertical flow starts here
+%% invisible nodes to keep A, B, C on same row
+A --- HA1(( )):::h
+B --- HA2(( )):::h
+C --- HA3(( )):::h
+
+
+%% ===== VERTICAL FLOW FROM HERE =====
 C --> D[Choose Model]
+D --> E[Parameters Tuning]
+E --> F[Training Model]
+F --> G[Cross Validation]
+G --> H{Training goal met?}
+H -->|No| E
+H -->|Yes| I[Deployment]
 
-%% ------------------ MIDDLE HORIZONTAL ------------------
-subgraph dev
-direction LR
-    E[Parameters Tuning] --> F[Training Model] --> G[Cross Validation]
-end
-style dev fill:none,stroke:none
+
+%% ===== Class for invisible nodes =====
+classDef h fill:none,stroke:none;
+
+
+
+
+
 
 %% connections
 D --> E
