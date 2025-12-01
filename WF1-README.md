@@ -11,21 +11,23 @@ flowchart TD
     classDef monitor fill:#26A69A,stroke:#004D40,color:#fff;
 
     A[Define Objective]:::start
-    B[Acquire Data<br/>RNA-seq, Clinical, Gencode]:::data
-    C[Integrate Data]:::process
-    D[Preprocess Data]:::process
-    E[Feature Engineering]:::process
-    F[Select Model<br/>Random Forest]:::model
-    G[Train Model]:::model
+    B[🔄Data Acquisition<br/>RNA-seq, Clinical, Gencode]:::data
+    C[⚙️Preprocess Data]:::process
+    D[📊PCA Analysis]:::process
+    E[🧬Identify PAM50 & ✨Feature Selection]:::process
+    F[📝Select Model<br/>Random Forest]:::model
+    G[🤖Train Model]:::model
     H[Cross Validation]:::model
     I{Performance OK?}:::decision
     J[Hyperparameter Tuning]:::model
     K[Identify Biomarkers<br/>Top 50 Genes]:::output
-    L[Deployment]:::output
+    L[🚀Deployment]:::output
     M[Model Monitoring<br/>Drift Detection]:::monitor
     N[Retrain Model]:::monitor
 
-    A --> B --> C --> D --> E --> F --> G --> H --> I
+    A --> B --> C
+    C--> D
+    D--> E --> F --> G --> H --> I
     I -- No --> J --> F
     I -- Yes --> K --> L --> M
     M -- Drift Detected --> N --> F
